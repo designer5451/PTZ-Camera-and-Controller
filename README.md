@@ -1,1 +1,9 @@
-# PTZ-Camera-and-Controller
+This PTZ camera head uses two ESP32 microcontrollers connected via Ethernet on a standard network, communicating over a TCP connection. The controller acts as the client, while the camera head serves as the server. A PS4 controller connects to the control module via Bluetooth. The PTZ head can pan and tilt the camera and control zoom through a standard 2.5mm LANC interface.
+
+Designed specifically for the Canon Vixia HF G30 camcorder, the PTZ head includes a servo to rotate the camera’s custom control knob. Although optimized for the Canon HF G30, it can work with other cameras that fit within its dimensions and support a standard LANC jack. However, only the Canon HF G30 can utilize the servo control for the custom knob.
+
+The PTZ head’s PCB includes an optional slot for an extra stepper motor, which can be configured to adjust the camera lens manually if you know how to edit Fusion 360 files and the ESP32 program. The controller board program requires updates with the PTZ camera head's IP address and the PS4 controller’s Bluetooth MAC address at the beginning of the program.
+
+To produce the two PCBs, I used JLCPCB, designing the boards in KiCad 8.0. I've attached the KiCad document, Gerber files, and a schematic screenshot. I soldered the components with a "PINECIL – Smart Mini Portable Soldering Iron (Version 2)" from [Pine64](https://pine64.com/product/pinecil-smart-mini-portable-soldering-iron/). The 3D-printed parts were designed in Fusion 360, and I’ve included the Fusion archive file along with all parts as STL files. I printed all of the 3d parts in PLA except for the to drive gears and the gear on the end of the servo which I printed in TPU.
+
+To cushion the base of the controller, I used a hot glue gun to apply small drops, creating soft pads. I also added small glue balls  that I pushed into the controller's light holes to help diffuse the light.
