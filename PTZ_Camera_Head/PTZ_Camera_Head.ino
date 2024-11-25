@@ -360,7 +360,7 @@ void movesteppers(void *prameters) {
         // Save varibles to non-volatile storage
         prefs.begin("my-app", false);
 
-        ("postionPan7", postionPan[7]);
+        prefs.putInt("postionPan7", postionPan[7]);
         prefs.putInt("postionTilt7", postionTilt[7]);
         prefs.end();
 

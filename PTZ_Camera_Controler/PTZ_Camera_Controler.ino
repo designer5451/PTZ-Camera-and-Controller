@@ -486,7 +486,7 @@ void send_variables() {
 
   // Update variables[10] only if PS4.R1 is not pressed
   if (R1Bool == 1) {
-    variables[11] = (joy2y > 2000 || joy2y < 1800) ? joy2y : (-PS4.RStickY() + 128) * 15;
+    variables[11] = (joy2y > 2000 || joy2y < 1800) ? joy2y : (PS4.RStickY() + 128) * 15;
   } else {
     variables[11] = 1900;
   }
